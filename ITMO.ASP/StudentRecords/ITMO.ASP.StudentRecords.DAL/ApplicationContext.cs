@@ -19,31 +19,5 @@ namespace ITMO.ASP.StudentRecords.DAL
         { 
            
         }
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-
-        //    modelBuilder.Entity<Student>().HasKey(p => p.Id);
-        //    modelBuilder.Entity<Student>().Property(t => t.FirstName)
-        //                                  //.HasColumnType("varchar")
-        //                                  .HasMaxLength(20)
-        //                                  .IsRequired()
-        //                                  .IsUnicode(true);
-        //    modelBuilder.Entity<Student>().Property(t => t.LastName)
-        //                                  //.HasColumnType("varchar")
-        //                                  .HasMaxLength(30)
-        //                                  .IsRequired()
-        //                                  .IsUnicode(true);
-        //    modelBuilder.Entity<Student>().Property(t => t.ScoreId).IsRequired();
-
-        //    modelBuilder.Entity<Score>().HasKey(p => p.Id);
-        //    modelBuilder.Entity<Score>().Property(t => t.ScoreValue)
-        //                                .IsRequired();
-        //    modelBuilder.Entity<Score>().Property(t => t.ScoreDescription)
-        //                                .HasColumnType("varchar")
-        //                                .HasMaxLength(19)
-        //                                .IsUnicode(true);
-        //}
     }
 }
