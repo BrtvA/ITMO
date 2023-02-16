@@ -18,7 +18,7 @@ namespace ITMO.ASP.StudentRecords.PL.Controllers
         private readonly ApplicationContext _db = new ApplicationContext();
 
         [HttpGet]
-        public async Task<ActionResult> AllInfo()
+        public async Task<ActionResult> Index()
         {
             using (StudentQuery studentQuery = new StudentQuery(_db))
             {
@@ -52,7 +52,7 @@ namespace ITMO.ASP.StudentRecords.PL.Controllers
                         return View(studentAddModel);
                     }
                 }
-                return RedirectToAction("AllInfo");
+                return RedirectToAction("Index");
             }
             await GetScoreInfo();
             return View(studentAddModel);
@@ -96,7 +96,7 @@ namespace ITMO.ASP.StudentRecords.PL.Controllers
                     return View();
                 }
             }
-            return RedirectToAction("AllInfo");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

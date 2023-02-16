@@ -58,7 +58,6 @@
     <Compile Include="Models\StudentAddModel.cs" />
     <Compile Include="Models\StudentAllModel.cs" />
     <Compile Include="Models\StudentDeleteModel.cs" />
-    <Compile Include="Models\StudentDeleteShortModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\ScoreQuery.cs" />
     <Compile Include="Queries\StudentQuery.cs" />
