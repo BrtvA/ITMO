@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<studies>
+	<course id="1">
+		<name>Технологии программировния</name>
+		<teacher>Осипов Никита Алексеевич</teacher>
+		<startDate>26.09.2022</startDate>
+		<endDate>07.10.2022</endDate>
+	</course>
+	<course id="2">
+		<name>Введение в базы данных</name>
+		<teacher>Ямщиков Денис Викторович</teacher>
+		<startDate>10.10.2022</startDate>
+		<endDate>20.10.2020</endDate>
+	</course>
+	<course id="3">
+		<name>Программирование на С#</name>
+		<teacher>Смольянинов Антон Валентинович</teacher>
+		<startDate>24.10.2022</startDate>
+		<endDate>08.11.2022</endDate>
+	</course>
+	<course id="4">
+		<name>Transact-SQL и Разработка Microsoft SQL-Server</name>
+		<teacher>Ямщиков Денис Викторович</teacher>
+		<startDate>14.11.2022</startDate>
+		<endDate>06.12.2022</endDate>
+	</course>
+	<course id="5">
+		<name>Разработка Windows-приложений на C#</name>
+		<teacher>Осипов Никита Алексеевич</teacher>
+		<startDate>12.12.2022</startDate>
+		<endDate>28.12.2022</endDate>
+	</course>
+</studies>

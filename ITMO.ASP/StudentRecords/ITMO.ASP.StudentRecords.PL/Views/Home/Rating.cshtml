@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ITMO.ASP.StudentRecords.DAL.Models.StudentAddModel>
+@{
+    ViewBag.Title = "Rating";
+}
+
+@{
+    if (Model != null)
+    {
+        <div class="info-content">
+            <p>Top 5 @ViewBag.TypeRating students</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                        <th>@Html.DisplayNameFor(model => model.ScoreDescription)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                     {
+                        <tr>
+                            <td>@item.LastName</td>
+                            <td>@item.FirstName</td>
+                            <td>@item.ScoreDescription</td>
+                        </tr>
+                     }
+                </tbody>
+            </table>
+        </div>
+        <div class="info-content">
+            @using (Html.BeginForm("Rating", "Home", FormMethod.Get))
+             {
+                <div class="info-content">
+                    <div class="block">
+                        @Html.RadioButton("type", "best", true)
+                    </div>
+                    <div class="block">
+                        <p>Top best</p>
+                    </div>
+                    <br />
+                    <div class="block">
+                        @Html.RadioButton("type", "bad", false)
+                    </div>
+                    <div class="block">
+                        <p>Top bad</p>
+                    </div>
+                    <br />
+                </div>
+                <div class="info-content">
+                    <input type="submit" value="Show" />
+                </div>
+             }
+        </div>
+    }
+}
+
+<div class="info-content">
+    <p class="valudation-message">@ViewBag.Message<p>
+</div>

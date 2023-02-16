@@ -1,0 +1,128 @@
+﻿<Window x:Class="ITMO.DesktopCSharp.WPF.Calculator.CalcApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITMO.DesktopCSharp.WPF.Calculator.CalcApp"
+        mc:Ignorable="d"
+        Title="CalculatorWPF" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize" 
+        WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Window.Resources>
+        <Style TargetType="MenuItem">
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#424242"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Margin" Value="0"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="BlueViolet"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="Black">
+        <Menu Background="DarkGray" MenuItem.Click="Menu_Click">
+            <MenuItem Header="Exit" Tag="26"/>
+            <MenuItem x:Name="switchBtn" Header="Switch to Engineering" Tag="27"/>
+        </Menu>
+        <TextBlock x:Name="versionTxtBlock" Text="Version" TextAlignment="Center" Padding="5" FontSize="20"/>
+        <Border x:Name="displayBorder" BorderThickness="2" BorderBrush="White" Width="300" Height="65.4">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="displayTxtBlock" TextAlignment="Right" Padding="10" FontSize="36" 
+                       TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+            </ScrollViewer>
+        </Border>
+        <Grid x:Name="buttonGrid" Button.Click="Grid_Click">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
+                <!--<ColumnDefinition Width="75"/>-->
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
+                <!--<RowDefinition Height="75"/>-->
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Column="0" Grid.Row="0" 
+                    Grid.ColumnSpan="2" Content="Date"
+                    Tag="10" ToolTip="Show date and time"/>
+            <Button Grid.Column="2" Grid.Row="0" Content="C"
+                    Tag="11" ToolTip="Clear field"/>
+            <Button Grid.Column="3" Grid.Row="0" Content="/"
+                    Tag="12" ToolTip="Division"/>
+            <!--<Button Grid.Column="4" Grid.Row="0" Content="^"
+                    Tag="13"/>-->
+
+            <Button Grid.Column="0" Grid.Row="1" Content="7" Background="Gray"
+                    Tag="7"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="8" Background="Gray"
+                    Tag="8"/>
+            <Button Grid.Column="2" Grid.Row="1" Content="9" Background="Gray"
+                    Tag="9"/>
+            <Button Grid.Column="3" Grid.Row="1" Content="X"
+                    Tag="14" ToolTip="Multiplication"/>
+            <!--<Button Grid.Column="4" Grid.Row="1" Content="^2"
+                    Tag="15"/>-->
+
+            <Button Grid.Column="0" Grid.Row="2" Content="4" Background="Gray"
+                    Tag="4"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="5" Background="Gray"
+                    Tag="5"/>
+            <Button Grid.Column="2" Grid.Row="2" Content="6" Background="Gray"
+                    Tag="6"/>
+            <Button Grid.Column="3" Grid.Row="2" Content="-"
+                    Tag="16" ToolTip="Subtraction"/>
+            <!--<Button Grid.Column="4" Grid.Row="2" Content="√"
+                    Tag="17"/>-->
+
+            <Button Grid.Column="0" Grid.Row="3" Content="1" Background="Gray"
+                    Tag="1"/>
+            <Button Grid.Column="1" Grid.Row="3" Content="2" Background="Gray"
+                    Tag="2"/>
+            <Button Grid.Column="2" Grid.Row="3" Content="3" Background="Gray"
+                    Tag="3"/>
+            <Button Grid.Column="3" Grid.Row="3" Content="+"
+                    Tag="18" ToolTip="Addition"/>
+            <!--<Button Grid.Column="4" Grid.Row="3" Content="∛"
+                    Tag="19"/>-->
+
+            <Button Grid.Column="0" Grid.Row="4" Content="0" Background="Gray"
+                    Tag="0"/>
+            <Button Grid.Column="1" Grid.Row="4" Content="."
+                    Tag="20" ToolTip="Decimal separator"/>
+            <Button Grid.Column="2" Grid.Row="4" Content="+/-"
+                    Tag="21" ToolTip="Sign change"/>
+            <Button Grid.Column="3" Grid.Row="4" Content="=" Background="DodgerBlue"
+                    Tag="22" ToolTip="Get result" Click="KeyEqual_Click"/>
+            <!--<Button Grid.Column="4" Grid.Row="4" Content="1/x"
+                    Tag="23"/>-->
+            <!--<Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Content="Equation"
+                    Tag="24"/>
+            <Button Grid.Column="4" Grid.Row="5" Content="!"
+                    Tag="25"/>-->
+        </Grid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,205 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:animations="clr-namespace:ITMO.ADO.DBManager.AdoStudio.Resources">
+    <!--Стиль Кисти-->
+    <LinearGradientBrush x:Key="DarkPurpleCustom" StartPoint="0,1" EndPoint="1,0">
+        <GradientStop Color="#060531" Offset="0"/>
+        <GradientStop Color="#1B1448" Offset="0.75"/>
+    </LinearGradientBrush>
+    
+    <!--Стиль Lable-->
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
+    </Style>
+    
+    <!--Стиль RadioButton-->
+    <Style TargetType="{x:Type RadioButton}">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
+        <Setter Property="Background" Value="Green"/>
+    </Style>
+    
+    <!--Стиль TextBox-->
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="#e3e1e1"/>
+        <Setter Property="CaretBrush" Value="White"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="DarkGray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="5"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+                        <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--Стиль Button-->
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="#e3e1e1"/>
+        <Setter Property="Background" Value="#28AEED"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard SpeedRatio="10">
+                            <ThicknessAnimation Storyboard.TargetProperty="Margin" To="10,6,10,6"/>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize" To="16"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard SpeedRatio="10">
+                            <ThicknessAnimation Storyboard.TargetProperty="Margin"/>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="BlueBtn" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#1073D5"/>
+                <Setter Property="Foreground" Value="DarkGray"/>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="#28AEED"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RedBtn" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Content" Value="X"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkRed"/>
+                <Setter Property="Foreground" Value="DarkGray"/>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--Стиль ComboBox-->
+    <Style TargetType="{x:Type ComboBox}">
+        <Setter Property="Margin" Value="5,2,5,2"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <!--Стиль DataGrid-->
+    <Style TargetType="{x:Type DataGrid}">
+        <Setter Property="Margin" Value="0,5,0,0"/>
+        <Setter Property="RowBackground" Value="#4836bf"/>
+        <Setter Property="AlternatingRowBackground" Value="Transparent"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="White"/>
+        <Setter Property="VerticalGridLinesBrush" Value="White"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+        <Setter Property="Background" Value="BlueViolet"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type DataGridCell}">
+        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True" >
+                <Setter Property="Background" Value="White" />
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--Стиль RowDefinition-->
+    <Style x:Key="loginRow" TargetType="RowDefinition">
+        <Setter Property="Height" Value="0"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=loginPasswordRadioBtn, Path=IsChecked}"
+                         Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <animations:GridLengthAnimation BeginTime="0:0:0"
+                                                            Duration="0:0:0.1"
+                                                            From="0"
+                                                            Storyboard.TargetProperty="Height"
+                                                            To="35"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <animations:GridLengthAnimation BeginTime="0:0:0"
+                                                            Duration="0:0:0.1"
+                                                            From="35"
+                                                            Storyboard.TargetProperty="Height"
+                                                            To="0"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,38 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<uni:studies xmlns:uni = "http://www.itmo.ru/xml/lessons">
+	<uni:course id="1">
+		<uni:name>Технологии программировния</uni:name>
+		<uni:teacher>Осипов Никита Алексеевич</uni:teacher>
+		<uni:startDate>26.09.2022</uni:startDate>
+		<uni:endDate>07.10.2022</uni:endDate>
+		<uni:book>Фаулер М. UML основы</uni:book>
+	</uni:course>
+	<uni:course id="2">
+		<uni:name>Введение в базы данных</uni:name>
+		<uni:teacher>Ямщиков Денис Викторович</uni:teacher>
+		<uni:startDate>10.10.2022</uni:startDate>
+		<uni:endDate>20.10.2020</uni:endDate>
+		<uni:book>Codd E.F. Normalized Data Base Structure: A Brief Tutorial</uni:book>
+	</uni:course>
+	<uni:course id="3">
+		<uni:name>Программирование на С#</uni:name>
+		<uni:teacher>Смольянинов Антон Валентинович</uni:teacher>
+		<uni:startDate>24.10.2022</uni:startDate>
+		<uni:endDate>08.11.2022</uni:endDate>
+		<uni:book>Ахо А. Компиляторы: принципы, технологии и инструментарий</uni:book>
+	</uni:course>
+	<uni:course id="4">
+		<uni:name>Transact-SQL и Разработка Microsoft SQL-Server</uni:name>
+		<uni:teacher>Ямщиков Денис Викторович</uni:teacher>
+		<uni:startDate>14.11.2022</uni:startDate>
+		<uni:endDate>06.12.2022</uni:endDate>
+		<uni:book>Dewson R. Beginning SQL Server for Developers</uni:book>
+	</uni:course>
+	<uni:course id="5">
+		<uni:name>Разработка Windows-приложений на C#</uni:name>
+		<uni:teacher>Осипов Никита Алексеевич</uni:teacher>
+		<uni:startDate>12.12.2022</uni:startDate>
+		<uni:endDate>28.12.2022</uni:endDate>
+		<uni:book>Троелсен Э. Язык программирования C# 9 и платформа .NET 5</uni:book>
+	</uni:course>
+</uni:studies>

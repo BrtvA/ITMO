@@ -1,0 +1,66 @@
+﻿<Window x:Class="ITMO.ADO.DBManager.AdoStudio.Views.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITMO.ADO.DBManager.AdoStudio.Views"
+        mc:Ignorable="d"
+        
+        xmlns:dataVM="clr-namespace:ITMO.ADO.DBManager.AdoStudio.ViewModels"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        Title="ADO Studio"
+        Height="450" Width="1150"
+        Background="{StaticResource DarkPurpleCustom}"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <dataVM:DataViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Grid.Row="1" Grid.Column="0"
+                  SelectedIndex="{Binding SelectedIndexBox, UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ChooseTableCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <ComboBoxItem>TransactionDetails.Transactions</ComboBoxItem>
+            <ComboBoxItem>CustomerDetails.Customers</ComboBoxItem>
+            <ComboBoxItem>ShareDetails.Shares</ComboBoxItem>
+            <ComboBoxItem>TransactionDetails.Transactions (Расширенный)</ComboBoxItem>
+        </ComboBox>
+        
+        <Button Grid.Row="1" Grid.Column="1"
+                Content="Сохранить в БД"
+                Style="{StaticResource BlueBtn}"
+                Command="{Binding SaveToDBCommand}"/>
+        <Button Grid.Row="1" Grid.Column="2"
+                Content="Загрузить из БД"
+                Style="{StaticResource BlueBtn}"
+                Command="{Binding RefreshFromDBCommand}"/>
+        <Button Grid.Row="1" Grid.Column="4"
+                Content="Отключиться"
+                Style="{StaticResource RedBtn}"
+                Command="{Binding DisconnectCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"/>
+
+        <DataGrid x:Name="dataGrid"
+                  Grid.Row="2" Grid.Column="0"
+                  Grid.ColumnSpan="5"
+                  CanUserDeleteRows="True"
+                  ItemsSource="{Binding TableDataView, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</Window>

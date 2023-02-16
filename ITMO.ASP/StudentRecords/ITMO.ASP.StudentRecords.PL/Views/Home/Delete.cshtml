@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ITMO.ASP.StudentRecords.DAL.Models.StudentDeleteModel>
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="info-content">
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                <th>@Html.DisplayNameFor(model => model.ScoreDescription)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.LastName</td>
+                            <td>@item.FirstName</td>
+                            <td>@item.ScoreDescription</td>
+                            <td>
+                                @using (Html.BeginForm("Delete", "Home", FormMethod.Post))
+                                {
+                                    @Html.Hidden("id", item.Id)
+                                    <input type="submit" value="Delete" />
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div class="info-content">
+    <p class = "valudation-message">@ViewBag.Message<p>
+</div>

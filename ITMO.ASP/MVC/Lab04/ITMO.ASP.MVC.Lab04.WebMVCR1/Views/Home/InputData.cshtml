@@ -1,0 +1,28 @@
+﻿@model ITMO.ASP.MVC.Lab04.WebMVCR1.Models.Person
+
+@{
+    //Layout = "_BasicLayout.cshtml";
+    ViewBag.Title = "Форма";
+}
+
+<div>
+    @using (Html.BeginForm())
+     {
+        <table>
+            <tr>
+                <td><p>Введите имя:</p></td>
+                <td>@Html.TextBox("FirstName")</td>
+            </tr>
+            <tr>
+                <td><p>Введите фамилию:</p></td>
+                <td>@Html.TextBoxFor(x => x.LastName)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+     }
+</div>

@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ITMO.CSharp.Lab11.Exercise2.Audit
+{
+    public class AuditEventArgs: EventArgs
+    {
+        private readonly BankTransaction transData = null;
+
+        public AuditEventArgs(BankTransaction transaction)
+        {
+            this.transData = transaction;
+        }
+
+        public BankTransaction getTransaction()
+        {
+            return this.transData;
+        }
+    }
+}

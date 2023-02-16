@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Style.css")"
+          rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <div class="block">
+            <div class="navbar">
+                <ul>
+                    <li>@Html.ActionLink("Student info", "AllInfo", "Home")</li>
+                    <li>@Html.ActionLink("Add new student", "Add", "Home")</li>
+                    <li>@Html.ActionLink("Delete student", "Delete", "Home")</li>
+                    <li>@Html.ActionLink("Rating", "Rating", "Home")</li>
+                    <li>@Html.ActionLink("Score summary", "Sum", "Home")</li>
+                </ul>
+            </div>
+        </div>
+        <div class="block">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

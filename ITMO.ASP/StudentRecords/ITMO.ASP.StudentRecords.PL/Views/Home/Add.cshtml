@@ -1,0 +1,45 @@
+﻿@model ITMO.ASP.StudentRecords.DAL.Models.StudentAddModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<div>
+    @{
+        if (ViewBag.Scores != null)
+        {
+            using (Html.BeginForm("Add", "Home", FormMethod.Post))
+            {
+                <div class="info-content">
+                    <p>@Html.DisplayNameFor(model => model.FirstName)</p>
+                    @Html.TextBoxFor(model => model.FirstName)<br />
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "valudation-message" })
+                </div>
+
+                <div class="info-content">
+                    <p>@Html.DisplayNameFor(model => model.LastName)</p>
+                    @Html.TextBoxFor(model => model.LastName)<br />
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "valudation-message" })
+                </div>
+
+                <div class="info-content">
+                    <p>@Html.DisplayNameFor(model => model.ScoreDescription)</p>
+                    <select name="ScoreDescription">
+                        @foreach (var scr in ViewBag.Scores)
+                        {
+                            <option>@scr</option>
+                        }
+                    </select><br />
+                    @Html.ValidationMessageFor(model => model.ScoreDescription, "", new { @class = "valudation-message" })
+                </div>
+
+                <div class="info-content">
+                    <input type="submit" value="Отправить" />
+                </div>
+            }
+        }
+    }
+
+    <div class="info-content">
+        <p class="valudation-message">@ViewBag.Message<p>
+    </div>
+</div>
