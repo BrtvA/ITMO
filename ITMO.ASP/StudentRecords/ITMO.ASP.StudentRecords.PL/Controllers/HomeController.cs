@@ -93,15 +93,19 @@ namespace ITMO.ASP.StudentRecords.PL.Controllers
         [HttpPost]
         public async Task<ActionResult> Delete(int id)
         {
-            using (StudentQuery studentQuery = new StudentQuery(_db))
+            if (ModelState.IsValid)
             {
-                ViewBag.Message = await studentQuery.DeleteInfoAsync(id);
-                if (ViewBag.Message != String.Empty)
+                using (StudentQuery studentQuery = new StudentQuery(_db))
                 {
-                    return View();
+                    ViewBag.Message = await studentQuery.DeleteInfoAsync(id);
+                    if (ViewBag.Message != String.Empty)
+                    {
+                        return View();
+                    }
                 }
+                return RedirectToAction("AllInfo");
             }
-            return RedirectToAction("AllInfo");
+            return RedirectToAction("Delete");
         }
 
         [HttpGet]
