@@ -18,18 +18,10 @@ namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        private void GiveCredits()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var allCredits = db.Credits.ToList<Credit>();
+            ViewBag.Credits = allCredits;
         }
 
         [HttpGet]
@@ -49,14 +41,22 @@ namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Controllers
             db.Bids.Add(newBid);
             // Сохраняем в БД все изменения
             db.SaveChanges();
-            return "Спасибо, <b>" + newBid.Name + "</b>, за выбор нашего банка. Ваша заявка будет рассмотрена в течении 10 дней.";
+            return "Спасибо, <b>" + newBid.Name 
+                + "</b>, за выбор нашего банка. Ваша заявка будет рассмотрена в течении 10 дней.";
         }
 
-
-        private void GiveCredits()
+        public ActionResult About()
         {
-            var allCredits = db.Credits.ToList<Credit>();
-            ViewBag.Credits = allCredits;
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
         }
     }
 }

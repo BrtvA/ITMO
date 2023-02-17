@@ -6,8 +6,7 @@ using System.Web;
 
 namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Models
 {
-    public class CreditsDbInitializer :
-        DropCreateDatabaseIfModelChanges<CreditContext>
+    public class CreditsDbInitializer : DropCreateDatabaseIfModelChanges<CreditContext>
     {
         protected override void Seed(CreditContext context)
         {
@@ -18,6 +17,7 @@ namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Models
                 Sum = 1000000,
                 Procent = 15
             });
+            
             context.Credits.Add(new Credit
             {
                 Head = "Образовательный кредит",
@@ -25,6 +25,7 @@ namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Models
                 Sum = 300000,
                 Procent = 10
             });
+            
             context.Credits.Add(new Credit
             {
                 Head = "Потребительский кредит",
@@ -36,4 +37,5 @@ namespace ITMO.ASP.MVC.Lab05.MvcCreditApp1.Models
             base.Seed(context);
         }
     }
+
 }
