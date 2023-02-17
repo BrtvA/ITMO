@@ -1,4 +1,4 @@
-# ITMO.ASP
+# Курс ASP.NET
 
 ## MVC
 
@@ -81,7 +81,7 @@
      - Упражнение 1. Использование Code-First
      - Упражнение 2. Отображение данных
 
-# ITMO.ADO
+# Курс ADO.NET
 
 1. [Лабораторная 1](ITMO.ADO/Lab1). Подключение к [базе данных](ITMO.ADO/Lab1/ITMO.ADO.Lab1.ex1/northwnd.sql)
 
@@ -137,7 +137,7 @@
 
 9. [Зачетное задание](ITMO.ADO/DBManager/ITMO.ADO.DBManager.AdoStudio). Разработать настольное приложение для просмотра и редактирования данных из [базы данных](ITMO.ADO/DBManager/ITMO.ADO.DBManager.AdoStudio/Data)
 
-# ITMO.HTML
+# Курс HTML(XML)
 
 ## Часть 1. Основы работы с HTML
 
@@ -227,7 +227,7 @@
      - Упражнение 2. Создание XML документа
      - Упражнение 3. Работа с пространствами имен
 
-# ITMO.DesktopCSharp
+# Курс Desktop C#
 
 ## I. WindowsForm
 
