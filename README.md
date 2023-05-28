@@ -10,6 +10,6 @@
 
 5. [Курс по HTML/XML](ITMO.MarkupLanguages)
 
-6. [Курс по Курс Desktop C#](ITMO.DesktopCSharp)
+6. [Курс по Desktop C#](ITMO.DesktopCSharp)
 
 7. [Курс по C#](ITMO.CSharp)
