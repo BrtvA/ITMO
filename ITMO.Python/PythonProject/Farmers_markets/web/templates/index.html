@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Main page</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-search">
+            <div class="main-search-param">
+                <h1>Farmers markets</h1>
+                <form id="find-form" method="get" action="/find">
+                    <input type="hidden" name="search_type" value="find" form="find-form"/>
+                    <input type="text" name="city" placeholder="City"
+                            pattern="[a-zA-Z]{1, 60}" required form="find-form"/>
+                    <input type="text" name="state" placeholder="State"
+                            pattern="[a-zA-Z]{1, 50}" required form="find-form"/>
+                    <input type="number" name="zip" placeholder="ZIP" required maxlength="10" form="find-form"/>
+
+                    <input type="number" name="distance" placeholder="Distance"
+                            oninput='changeVisibility("find-coordinates", this.value, false)' form="find-form"/>
+                    <div id="find-coordinates" class="main-search-param-coordinates" style="display: none;">
+                        <input type="number" name="x" placeholder="X" value="{{context.config.x}}" form="find-form"/>
+                        <input type="number" name="y" placeholder="Y" value="{{context.config.y}}" form="find-form"/>
+                    </div>
+
+                    <input type="hidden" name="page" value="0" form="find-form"/>
+                    <input type="submit" value="Find" form="find-form"/>
+                </form>
+            </div>
+            <div class="main-search-param">
+                <h2>Sort options</h2>
+                <form id="find-sort" method="get" action="/sort">
+                    <input type="hidden" name="search_type" value="sort"/>
+                    <select name="sort_param" required onchange='changeVisibility("sort-coordinates", this.value, true)'>
+                        <option value="id">Id</option>
+                        <option value="name">Market name</option>
+                        <option value="street">Street</option>
+                        <option value="city">City</option>
+                        <option value="county">County</option>
+                        <option value="state">State</option>
+                        <option value="zip">ZIP</option>
+                        <option value="distance">Distance</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                    <div id="sort-coordinates" class="main-search-param-coordinates" style="display: none;">
+                        <input type="number" name="x" placeholder="X" value="{{context.config.x}}"/>
+                        <input type="number" name="y" placeholder="Y" value="{{context.config.y}}"/>
+                    </div>
+                    <select name="sort_type" required>
+                        <option value="asc">ascending</option>
+                        <option value="desc">descending</option>
+                    </select>
+                    <input type="hidden" name="page" value="0"/>
+                    <input type="submit" value="Show"/>
+                </form>
+            </div>
+        </div>
+        {% if context.data != None %}
+            <div class="main-data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Market name</th>
+                            <th>Street</th>
+                            <th>City</th>
+                            <th>County</th>
+                            <th>State</th>
+                            <th>ZIP</th>
+                            <th>Distance</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in context.data %}
+                            <tr>
+                                <td>{{item[0]}}</td>
+                                <td><a href="/market/{{item[0]}}">{{item[1]}}</a></td>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                                <td>{{item[4]}}</td>
+                                <td>{{item[5]}}</td>
+                                <td>{{item[6]}}</th>
+                                <td>{{item[7]}}</th>
+                                <td>{{item[8]}}</th>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% if context.search_type == "sort" %}
+                    <div class="main-data-navigation">
+                        {% if context.page > 0: %}
+                            <form method="get" action="/sort">
+                                <input type="hidden" name="search_type" value="{{context.search_type}}"/>
+                                <input type="hidden" name="sort_param" value="{{context.config.sort_param}}"/>
+                                <input type="hidden" name="sort_type" value="{{context.config.sort_type}}"/>
+                                <input type="hidden" name="x" value="{{context.config.x}}"/>
+                                <input type="hidden" name="y" value="{{context.config.y}}"/>
+                                <input type="hidden" name="page" value="{{context.page-1}}"/>
+                                <input type="submit" value="Previous"/>
+                            </form>
+                        {% endif %}
+                        <p>Page {{context.page}}</p>
+                        <form method="get" action="/sort">
+                            <input type="hidden" name="search_type" value="{{context.search_type}}"/>
+                            <input type="hidden" name="sort_param" value="{{context.config.sort_param}}"/>
+                            <input type="hidden" name="sort_type" value="{{context.config.sort_type}}"/>
+                            <input type="hidden" name="x" value="{{context.config.x}}"/>
+                            <input type="hidden" name="y" value="{{context.config.y}}"/>
+                            <input type="hidden" name="page" value="{{context.page+1}}"/>
+                            <input type="submit" value="Next"/>
+                        </form>
+                    </div>
+                {% endif %}
+            <div>
+        {% endif %}
+        {% if context.error != None %}
+            <p>{{context.error}}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+<script>
+    function changeVisibility(eleventId, value, isSelect){
+        elementDiv=document.getElementById(eleventId)
+        if (isSelect){
+            if (value == "distance"){
+                elementDiv.style.display = "flex"
+            }else{
+                elementDiv.style.display = "none"
+            }
+        }else{
+            if (value != 0 || value != ""){
+            elementDiv.style.display = "flex"
+            }else{
+            elementDiv.style.display = "none"
+            }
+        }
+    }
+</script>

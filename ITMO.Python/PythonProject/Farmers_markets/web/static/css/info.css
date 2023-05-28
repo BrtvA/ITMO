@@ -1,0 +1,132 @@
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ----------------Info page---------------- */
+
+.info{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:start;
+}
+
+.info-market{
+    width: 1700px;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info-market p{
+    font-size: 20px;
+}
+
+.info-market li{
+    font-size: 20px;
+}
+
+.info-market input[type="button"]{
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.info-market input[type="button"]:hover{
+    background-color: #c3e8f5;
+}
+
+.info-market h2{
+    border: 2px #eee solid;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    background-color: #77b37c;
+}
+
+.info-review{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left-style:solid;
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.info-review-feedback{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-review-feedback form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.info-review-feedback form p{
+    margin-left: 20px;
+    font-size: 20px;
+    color: red;
+}
+
+.info-review-feedback form input{
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info-review-feedback form textarea{
+    font-size: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.info-review-feedback form label{
+    font-size: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.info-review-feedback form select{
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+.info-review-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.info-review-list div{
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #e8f3f7;
+}
+
+.info-review-list div:hover{
+    background-color: #c3e8f5;
+}

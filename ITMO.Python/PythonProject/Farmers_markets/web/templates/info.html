@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/info.css') }}">
+    <title>Info page</title>
+</head>
+<body>
+    <div class="info">
+        <div class="info-market">
+            <h1>Information about market</h1>
+            <input type="button" onclick="history.back();" value="Назад"/>
+            <p>
+                <b>FMID: </b>
+                {{context.data[0]}}
+            </p>
+            <p>
+                <b>Market name:</b>
+                {{context.data[1]}}
+            </p>
+            <p>
+                <b>Average rating: </b>
+                {{context.data[2]}}
+            </p>
+            <p>
+                <b>UpdateTime: </b>
+                {{context.data[3]}}
+            </p>
+            <br>
+
+            <h2>Contacts</h1>
+            {% for item in context.data[4] %}
+            <p>
+                <b>{{item[0]}}: </b>
+                <a href="{{item[0]}}">{{item[1]}}</a>
+            </p>
+            {% endfor %}
+            <br>
+
+            <h2>Position</h2>
+            <p>
+                <b>Street: </b>
+                {{context.data[5]}}
+            </p>
+            <p>
+                <b>City: </b>
+                {{context.data[6]}}
+            </p>
+            <p>
+                <b>County: </b>
+                {{context.data[7]}}
+            </p>
+            <p>
+                <b>State: </b>
+                {{context.data[8]}}
+            </p>
+            <p>
+                <b>ZIP: </b>
+                {{context.data[9]}}
+            </p>
+            <p>
+                <b>x: </b>
+                {{context.data[10]}}
+            </p>
+            <p>
+                <b>y: </b>
+                {{context.data[11]}}
+            </p>
+            <br>
+
+            <h2>Season information</h2>
+            {% for item in context.data[12] %}
+                <p>
+                    <b>Season date: </b>
+                    {{item[0]}}
+                </p>
+                <p>
+                    <b>Season time: </b>
+                    {{item[1]}}
+                </p>
+                <br>
+            {% endfor %}
+
+            <h2>Additional Information</h2>
+            {% for item in context.data[13] %}
+                <li>{{item}}</li>
+            {% endfor %}
+            <br>
+
+            <h2>Catalog</h2>
+            {% for item in context.data[14] %}
+                <li>{{item}}</li>
+            {% endfor %}
+        </div>
+
+        <div class="info-review">
+            <h2>Reviews</h2>
+            <div class="info-review-feedback">
+                <form method="post" action="/review">
+                    <input type="hidden" name="market_id" value="{{context.market_id}}"/>
+                    <input type="text" name="firstname" placeholder="First name" required 
+                            maxlength="20" pattern="[a-zA-ZА-Яа-яЁё]{1, 20}"/>
+                    <input type="text" name="lastname" placeholder="Last name" required
+                            maxlength="20" pattern="[a-zA-ZА-Яа-яЁё]{1, 20}"/>
+                    <label>Rating</label>
+                    <select name="rating" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <textarea name="text" maxlength="200"></textarea>
+                    <input type="submit" value="Send"/>
+                    {% if context.error != None: %}
+                        <p>{{context.error}}</p>
+                    {% endif %}
+                </form>
+            </div>
+            <div class="info-review-list">
+                {% if context.review != None %}
+                    {% for item in context.review %}
+                        <div>
+                            <p>
+                                <b>{{item[0]}} {{item[1]}}</b>
+                            </p>
+                            <p>
+                                <b>Rating: </b>
+                                {{item[2]}}
+                            </p>
+                            {% if item[3] != None %}
+                                <p>{{item[3]}}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
