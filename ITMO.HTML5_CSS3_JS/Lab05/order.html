@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, на которой вы можете приобрести билет в кинотеатр.">
+        <meta name="keywords" content="Кино, кинотеатр, аврора, билет, человек-паук">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <link rel="stylesheet" href="./css/style-flex.css">
+        <title>Аврора - Заказ</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <span>
+                    <h1>Кинотеатр Аврора</h1>
+                </span>
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                <span>
+                    <a href="posters.html">Афиша</a>
+                </span>
+                <br /><br />
+            </header>
+            <main>
+                <section id="order-section" class="template-section">
+                    <article>
+                        <img src="./img/hall scheme.jpg">
+                    </article>
+                    <article>
+                        <form method="get" action="">
+                            <span>
+                                <div>
+                                    <p>Выберете зал:</p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="radio" name="hall" value="a" required /> Зал A
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="hall" value="b" required /> Зал B
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="hall" value="c" required /> Зал C
+                                    </div>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете ряд:</p>
+                                </div>
+                                <div>
+                                    <select name="row" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете место:</p>
+                                </div>
+                                <div>
+                                    <select name="column" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете время:</p>
+                                </div>
+                                <div>
+                                    <select name="time" required>
+                                        <option value="10:00">10:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="21:00">21:00</option>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Введите email:</p>
+                                </div>
+                                <div>
+                                    <input type="email" name="email" required />
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Введите номер телефона:</p>
+                                </div>
+                                <div>
+                                    <input type="text" name="phoneNumber" pattern="8[0-9]{10}" />
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете дополнительные услуги:</p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="checkbox" name="popcorn" value="popcorn" /> Попкорн (средний)
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="soda" value="soda" /> Газировка (0.5 л)
+                                    </div>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Цена:</p>
+                                </div>
+                                <div id="price-div">
+                                    <p>300 pуб</p>
+                                </div>
+                            </span>
+                            <span>
+                                <button id="buy-btn" type="submit">Купить</button>
+                            </span>
+                        </form>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; 2023 Aurora</h4>
+            </footer>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

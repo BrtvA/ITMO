@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1, h2, h3, h4, p, a{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: rgb(250, 249, 247);
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(26, 25, 25);
+    height: 50px;
+    border-bottom: 5px solid white;
+}
+
+header a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header a:hover{
+    font-weight: 700;
+    color: rgb(209, 206, 201);
+    text-decoration:underline;
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+header span{
+    margin-right: 20px;
+}
+
+header span:first-child,
+header span:nth-child(2){
+    margin-left: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex: 1 1 auto;
+    background-color: rgb(39, 39, 39);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 25, 25);
+    height: 50px;
+    border-top: 5px solid white;
+}
+
+footer h4{
+    margin: 10px;
+}
+
+/* Стили для section */
+
+.template-section{
+    display: flex;
+    color: rgb(250, 249, 247);
+    width:1200px;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.column-direction-section{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row-direction-section{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Кнопка меню */
+
+.menu{
+    display: none;
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.submenu{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+    border: 1px solid #aaa;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(26, 25, 25);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+}
+
+.submenu li{
+    padding: 10px;
+    height: 100%;
+}
+
+.submenu li:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+.submenu li a{
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.submenu li a:hover{
+    text-decoration: none;
+    background-color: rgb(39, 39, 39);
+}
+
+.icon-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.icon-menu:hover{
+    background-color: rgb(75, 73, 73);
+    border-radius: 5px;
+}
+
+.icon-menu div{
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.icon-menu div:nth-child(2){
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px){
+    .menu{
+        display: flex;
+    }
+    .container span:nth-child(3),
+    .container span:nth-child(4),
+    .container span:nth-child(5){
+        display: none;
+    }
+}
+
+/* Контекстное меню */
+
+#context-menu{
+    display: none;
+    position: absolute;
+    background-color: rgb(131, 124, 124);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    padding: 0px;
+    margin: 0px;
+    z-index: 2;
+}
+
+#context-menu ul{
+    display: block;
+    border-radius: 5px;
+}
+
+#context-menu a{
+    font-size: 20px;
+}
+
+/* Красная кнопка */
+
+.red-button{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: brown;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+.red-button:hover{
+    background-color: rgb(214, 29, 29);
+    border-color: rgb(184, 175, 175);
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+}
+
+/* Главная страница */
+
+#background-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/cinema_chairs.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#trailers-section article {
+    margin: 10px;
+    height: 315px;
+    width: 48%;
+}
+
+#trailers-section article iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Новости */
+
+.indicator-actual::after{
+    content: attr(data-text);
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    background-color: rgb(209, 207, 207);
+    font-family: 'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-top-left-radius: 5px;
+}
+
+#news-section h3{
+    font-family:'Lobster',sans-serif;
+}
+
+#news-section p{
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+}
+
+#news-section article{
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#news-section article div{
+    margin-bottom: 10px;
+}
+
+#news-section article div:first-child{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+#news-section article div img{
+    width: 100%;
+    max-height: 350px;
+}
+
+/* Афиша */
+
+.indicator-new::before{
+    content: "Новинка";
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    background-color: rgb(212, 212, 21);
+    font-family:'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 5px;
+}
+
+#posters-section>article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin: 10px;
+}
+
+#posters-section>article:hover{
+    background-color: rgb(65, 64, 64);
+    border-radius: 10px;
+}
+
+#posters-section>article>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    margin: 10px;
+}
+
+#posters-section>article>div:nth-child(2){
+    width: 200px;
+}
+
+#posters-section>article>div>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#posters-section>article>div>div:first-child{
+    height: inherit;
+    margin-bottom: 10px;
+}
+
+#posters-section>article>div>div>a{
+    font-size: 20px;
+}
+
+#posters-section>article>div>div>a:hover{
+    color: rgb(209, 206, 201);
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+#posters-section>article>div>img{
+    width: 100%;
+    height: 100%;
+}
+
+#posters-section>article>div>div>div:first-child{
+    margin-right: 10px;
+}
+
+/* Подробная информация */
+
+.scroll-section{
+    height: 75%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#info-section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 48%;
+    height:315px;
+    margin: 10px;
+}
+
+#info-section article:first-child div{
+    width: 100%;
+    height: 100%;
+}
+
+#info-section article div{
+    margin-bottom: 10px;
+}
+
+#info-section article div a:hover{
+    color: rgb(209, 206, 201);
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+#info-section article iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#info-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    padding-right: 5px;
+}
+
+/* Покупка */
+
+#order-section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 540px;
+    margin: 10px;
+}
+
+#order-section article:first-child{
+    max-height: 372px;
+}
+
+#order-section article img{
+    width: 100%;
+    height: 100%;
+}
+
+#order-section article form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+#order-section article form span{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#order-section article form span div:first-child{
+    width: 262px;
+}
+
+#order-section article form span div select{
+    width: 100px;
+}
+
+#order-section article form span div p,
+#order-section article form span div select,
+#order-section article form span div div,
+#order-section article form span div input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#order-section article form span div input[type=text],
+#order-section article form span div input[type=email],
+#order-section article form span div select{
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#order-section article form span div input:focus{
+    outline:none;
+    border: 1px solid rgb(47, 47, 228);
+}
+
+/* Подробности заказа */
+
+#order-info-section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 540px;
+}
+
+#order-info-section div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#order-info-section div span{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+#order-info-section div span p{
+    font-size: 20px;
+}
+
+#order-info-section div span:first-child{
+    max-width: 200px;
+    min-width: 180px;
+}
+
+#order-info-section div span ul{
+    margin: 0px;
+    padding: 0px;
+}

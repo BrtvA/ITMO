@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body{
+    margin: 0px;
+}
+
+h1, h2, h3, h4, p{
+    margin: 0px
+}
+
+header{
+    background-color: rgb(26, 25, 25);
+    border-bottom: 4px solid white;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: rgb(250, 249, 247);
+    height: 50px;
+}
+
+header h1{
+    font-weight:300;
+}
+
+header a{
+    color: rgb(250, 249, 247);
+}
+
+header span{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+main{
+    background-color: rgb(39, 39, 39);
+    height: 900px;
+}
+
+footer{
+    background-color:rgb(26, 25, 25);
+    border-top: 4px solid white;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(250, 249, 247);
+    text-align: center;
+    line-height: 4em;
+}
+
+footer h4{
+    display: inline-block;
+}
+
+.template-section{
+    width:1200px;
+    height: 100%;
+    margin:auto;
+    padding-top: 5px;
+}
+
+/* Главная страница */
+#background-img{
+    background: url('../img/cinema_chairs.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#trailers-section>article {
+    max-width: 50%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    height:315px;
+}
+
+#trailers-section>article>iframe{
+    width: 560px;
+    height: 100%;
+}
+
+/* Новости */
+#news-section{
+    color: rgb(250, 249, 247);
+}
+
+#news-section h3{
+    font-family:'Lobster',sans-serif;
+    font-weight: 300;
+}
+
+#news-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+#news-section article{
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#news-section article img{
+    width: 100%;
+    height: 350px;
+}
+
+/* Афиша */
+#posters-section{
+    color: rgb(250, 249, 247);
+}
+
+#posters-section a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(250, 249, 247);
+}
+
+#posters-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+#posters-section article{
+    width: 60%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#posters-section article div{
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+}
+
+#posters-section article div img{
+    width: 100%;
+    height: 100%;
+}
+
+#posters-section article div p{
+    display: inline-block;
+}
+
+/* Подробная информация */
+
+#info-section article{
+    vertical-align: top;
+    max-width: 50%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    height:315px;
+    color: rgb(250, 249, 247);
+}
+
+#info-section article iframe{
+    width: 560px;
+    height: 100%;
+}
+
+#info-section article div{
+    margin-bottom: 10px;
+}
+
+#info-section a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(250, 249, 247);
+}
+
+#info-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+/* Покупка */
+#order-section article{
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(250, 249, 247);
+}
+
+#order-section article div{
+    margin-bottom: 5px;
+}
+
+#order-section article img{
+    width: 100%;
+    height: 100%;
+}
+
+#order-section p, span, input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#order-section button{
+    background-color: brown;
+    border-radius: 1em;
+    width: 150px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: large;
+    color: rgb(250, 249, 247);
+}

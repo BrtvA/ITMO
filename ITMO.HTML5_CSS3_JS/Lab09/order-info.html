@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, c подробностями заказа.">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <link rel="stylesheet" href="./css/style-flex.css">
+        <title>Аврора - Подробности заказа</title>
+    </head>
+    <body>
+        <div id="context-menu">
+            <ul class="submenu">
+                <li>
+                    <a id="history-back" >
+                        Назад
+                    </a>
+                </li>
+                <li>
+                    <a id="history-go" >
+                        Вперед
+                    </a>
+                </li>
+                <li>
+                    <a id="location-reload" >
+                        Обновить
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <header>
+                <span class="menu">
+                    <ul>
+                        <div class="icon-menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <ul id="submenu" class="submenu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="posters.html">Афиша</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                        </ul>
+                    </ul>
+                </span>
+                <span>
+                    <h1>Кинотеатр Аврора</h1>
+                </span>
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                <span>
+                    <a href="posters.html">Афиша</a>
+                </span>
+                <span>
+                    <a href="news.html">Новости</a>
+                </span>
+                <br /><br />
+            </header>
+            <main>
+                <section id="order-info-section" class="template-section row-direction-section">
+                    <article>
+                        <div>
+                            <span>
+                                <h2>Ваш заказ:</h2>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <p>Кинолента:</p>
+                            </span>
+                            <span>
+                                <p id="movie-name">-</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <p>Зал:</p>
+                            </span>
+                            <span>
+                                <p id="hall">-</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <p>Позиция:</p>
+                            </span>
+                            <span>
+                                <ul>
+                                    <li><p id="place-row">ряд -</p></li>
+                                    <li><p id="place-column">место -</p></li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <p>Время:</p>
+                            </span>
+                            <span>
+                                <p id="time">-</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <p>Дополнительно:</p>
+                            </span>
+                            <span>
+                                <ul id="additional">
+                                </ul>
+                            </span>
+                        </div>
+                        <div>
+                            <button class="red-button" type="button">Очистить</button>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; 2023 Aurora</h4>
+            </footer>
+        </div>
+        <script charset="utf-8" src="./js/jquery-3.7.0.js"></script>
+        <script charset="utf-8" src="./js/main.js"></script>
+        <script charset="utf-8" src="./js/order-info.js"></script>
+    </body>
+</html>

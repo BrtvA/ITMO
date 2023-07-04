@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, на которой вы можете приобрести билет в кинотеатр.">
+        <meta name="keywords" content="Кино, кинотеатр, аврора, новости">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <link rel="stylesheet" href="./css/style-flex.css">
+        <title>Аврора - Новости</title>
+    </head>
+    <body>
+        <div id="context-menu">
+            <ul class="submenu">
+                <li>
+                    <a id="history-back" >
+                        Назад
+                    </a>
+                </li>
+                <li>
+                    <a id="history-go" >
+                        Вперед
+                    </a>
+                </li>
+                <li>
+                    <a id="location-reload" >
+                        Обновить
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <header>
+                <span class="menu">
+                    <ul>
+                        <div class="icon-menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <ul id="submenu" class="submenu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="posters.html">Афиша</a></li>
+                        </ul>
+                    </ul>
+                </span>
+                <span>
+                    <h1>Кинотеатр Аврора</h1>
+                </span>
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                <span>
+                    <a href="posters.html">Афиша</a>
+                </span>
+            </header>
+            <main>
+                <section id="news-section" class="template-section column-direction-section">
+                    <article>
+                        <div class="indicator-actual" data-text="Актуальное">
+                            <img src="./img/news/new_hall_news.png" />
+                        </div>
+                        <div>
+                            <h3>Зал С снова в строю</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Сегодня после долгой реставрации был открыт зал С. 
+                                Было установлено новое кинооборудование и проведена заменена кресел.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/news/spiderman_news.jpg" />
+                        </div>
+                        <div>
+                            <h3>Человек-паук наконец в прокате</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Сегодня стартовала премьера новой части трилогии фильма о человеке-пауке. 
+                                Отзывы о фильме как всегда на высоте.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; 2023 Aurora</h4>
+            </footer>
+        </div>
+        <script charset="utf-8" src="./js/jquery-3.7.0.js"></script>
+        <script charset="utf-8" src="./js/main.js"></script>
+    </body>
+</html>

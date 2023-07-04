@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body{
+    margin: 0px;
+}
+
+h1, h2, h3, h4, p{
+    margin: 0px
+}
+
+header{
+    background-color: rgb(26, 25, 25);
+    border-bottom: 4px solid white;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: rgb(250, 249, 247);
+    height: 50px;
+}
+
+header h1{
+    font-weight:300;
+}
+
+header a{
+    color: rgb(250, 249, 247);
+    text-decoration: none;
+}
+
+header a:hover{
+    font-size: 20px;
+    color: rgb(209, 206, 201);
+}
+
+header span{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+main{
+    background-color: rgb(39, 39, 39);
+    min-height: 861px;
+}
+
+footer{
+    background-color:rgb(26, 25, 25);
+    border-top: 4px solid white;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(250, 249, 247);
+    text-align: center;
+    /* line-height: 4em; */
+    height: 50px;
+}
+
+footer h4{
+    display: inline-block;
+    transform: translate(0px, 80%);
+}
+
+.template-section{
+    width:1200px;
+    height: 100%;
+    margin:auto;
+    padding-top: 5px;
+}
+
+/* Главная страница */
+#background-img{
+    background: url('../img/cinema_chairs.png');
+    background-size: cover;
+    background-position: center;
+    min-height: inherit;
+    width: inherit;
+}
+
+#trailers-section>article {
+    max-width: 50%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    height:315px;
+}
+
+#trailers-section>article>iframe{
+    width: 560px;
+    height: 100%;
+}
+
+/* Новости */
+.indicator-actual::before{
+    content: "Актуальное";
+    position: absolute;
+    top: 396px;
+    margin-left: 499px;
+    width: 100px;
+    height: 22px;
+    background-color: rgb(209, 207, 207);
+    font-family:'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-top-left-radius: 5px;
+}
+
+#news-section{
+    color: rgb(250, 249, 247);
+}
+
+#news-section h3{
+    font-family:'Lobster',sans-serif;
+    font-weight: 300;
+}
+
+#news-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+#news-section article{
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#news-section article img{
+    width: 100%;
+    height: 350px;
+}
+
+/* Афиша */
+.indicator-new::before{
+    content: "Новинка";
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    background-color: rgb(212, 212, 21);
+    font-family:'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 5px;
+}
+
+#posters-section{
+    color: rgb(250, 249, 247);
+}
+
+#posters-section a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(250, 249, 247);
+}
+
+#posters-section a:hover{
+    color: rgb(179, 178, 176);
+}
+
+#posters-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+#posters-section article{
+    width: 60%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#posters-section article div{
+    vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    padding: 2px;
+}
+
+#posters-section article div img{
+    width: 100%;
+    height: 100%;
+}
+
+#posters-section article div p{
+    display: inline-block;
+}
+
+/* Подробная информация */
+.scroll-section{
+    height: 75%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#info-section article{
+    vertical-align: top;
+    max-width: 50%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    height:315px;
+    color: rgb(250, 249, 247);
+}
+
+#info-section article iframe{
+    width: 560px;
+    height: 100%;
+}
+
+#info-section article div{
+    margin-bottom: 10px;
+}
+
+#info-section a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(250, 249, 247);
+}
+
+#info-section a:hover{
+    font-size: 20px;
+    color: rgb(209, 206, 201);
+}
+
+#info-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    padding-right: 5px;
+}
+
+/* Покупка */
+#order-section{
+    padding-top: 10px;
+}
+
+#order-section article{
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    margin: auto;
+    color: rgb(250, 249, 247);
+    /* height: auto; */
+    height: 425px;
+}
+
+#order-section article img{
+    width: 100%;
+    /* height: auto; */
+    height: 100%;
+}
+
+#order-section article form{
+    margin-left: 10px;
+}
+
+#order-section article form span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#order-section article form span div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#order-section article form span div p{
+    min-width: 242px;
+}
+
+#order-section article form span div select{
+    width: 100px;
+}
+
+#order-section article form span div div{
+    display: block;
+}
+
+#order-section article form span div p,
+#order-section article form span div select,
+#order-section article form span div div,
+#order-section article form span div input,
+#order-section article form span button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#order-section article form span div input[type=text],
+#order-section article form span div input[type=email],
+#order-section article form span div select{
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+}
+
+#order-section article form span div input:focus{
+    outline:none;
+    border: 1px solid rgb(47, 47, 228);
+}
+
+#order-section article form span button{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: brown;
+    font-size: 25px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+#order-section article form span button:hover{
+    background-color: rgb(214, 29, 29);
+    border-color: rgb(184, 175, 175);
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+}
+
+
+/* #order-section article{
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(250, 249, 247);
+}
+
+#order-section article div{
+    margin-bottom: 5px;
+}
+
+#order-section article img{
+    display: inline-block;
+    width: 506px;
+    height: 349px;
+    margin: auto;
+}
+
+#order-section p, span, input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#order-section input:focus{
+    border: 1px solid #b4b2b2;
+    border-radius: 5px;
+}
+
+#order-section button{
+    background-color: brown;
+    border-radius: 1em;
+    width: 150px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: large;
+    color: rgb(250, 249, 247);
+} */

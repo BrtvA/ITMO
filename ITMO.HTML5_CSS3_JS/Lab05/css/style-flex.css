@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    /* display: flex;
+    flex-direction: column; */
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1, h2, h3, h4, p, a{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: rgb(250, 249, 247);
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    /* height: 5vh; */
+    background-color: rgb(26, 25, 25);
+    /* border-bottom: 0.5vh solid white;  */
+    height: 50px;
+    border-bottom: 5px solid white;
+}
+
+header a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header a:hover{
+    font-weight: 700;
+    color: rgb(209, 206, 201);
+    /* box-shadow: 0px 1px 1px rgb(167, 164, 161); */
+    text-decoration:underline;
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+header span{
+    margin-right: 20px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex: 1 1 auto;
+    /* flex: 1 0 auto; */
+    /* height: 89vh; */
+    background-color: rgb(39, 39, 39);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 5vh; */
+    background-color: rgb(26, 25, 25);
+    /* border-top: 0.5vh solid white; */
+    height: 50px;
+    border-top: 5px solid white;
+}
+
+footer h4{
+    margin: 10px;
+}
+
+.template-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(250, 249, 247);
+    width:1200px;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Главная страница */
+
+#background-img{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: url('../img/cinema_chairs.png');
+    background-size: cover;
+    background-position: center;
+    /* min-height: inherit;
+    width: inherit; */
+}
+
+#trailers-section{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#trailers-section>article {
+    /* max-width: 50%; */
+    margin: 10px;
+    /* margin-top: 10px; */
+    height:315px;
+    width: 560px;
+}
+
+#trailers-section>article>iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Новости */
+.indicator-actual::before{
+    content: "Актуальное";
+    position: absolute;
+    top: 390px;
+    margin-left: 499px;
+    width: 100px;
+    height: 22px;
+    background-color: rgb(209, 207, 207);
+    font-family:'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-top-left-radius: 5px;
+}
+
+#news-section h3{
+    font-family:'Lobster',sans-serif;
+}
+
+/* #news-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} */
+
+#news-section p{
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+}
+
+#news-section article{
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#news-section article img{
+    width: 100%;
+    max-height: 350px;
+}
+
+/* Афиша */
+.indicator-new::before{
+    content: "Новинка";
+    position: absolute;
+    width: 80px;
+    height: 22px;
+    background-color: rgb(212, 212, 21);
+    font-family:'Lobster',sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 5px;
+}
+
+#posters-section article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin: 10px;
+}
+
+#posters-section article:hover{
+    background-color: rgb(65, 64, 64);
+    border-radius: 10px;
+}
+
+#posters-section article div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    margin: 10px;
+}
+
+#posters-section article div:nth-child(2){
+    width: 200px;
+}
+
+#posters-section article div a{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#posters-section article div a:hover{
+    color: rgb(209, 206, 201);
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+#posters-section article div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Подробная информация */
+.scroll-section{
+    height: 75%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#info-section{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#info-section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 560px;
+    height:315px;
+    margin: 10px;
+}
+
+#info-section article div{
+    margin-bottom: 10px;
+}
+
+#info-section article div a:hover{
+    color: rgb(209, 206, 201);
+    text-decoration-color: rgb(167, 164, 161);
+}
+
+#info-section article iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#info-section p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    padding-right: 5px;
+}
+
+/* Покупка */
+#order-section{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#order-section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45%;
+    margin: 10px;
+}
+
+#order-section article:first-child{
+    width: 540px;
+    height: 372px;
+}
+
+#order-section article img{
+    width: 100%;
+    height: 100%;
+}
+
+#order-section article form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+#order-section article form span{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin: 10px; */
+    margin-bottom: 10px;
+}
+
+#order-section article form span div:first-child{
+    width: 262px;
+}
+
+#order-section article form span div select{
+    width: 100px;
+}
+
+#order-section article form span div p,
+#order-section article form span div select,
+#order-section article form span div div,
+#order-section article form span div input,
+#order-section article form span button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#order-section article form span div input[type=text],
+#order-section article form span div input[type=email],
+#order-section article form span div select{
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#order-section article form span div input:focus{
+    outline:none;
+    border: 1px solid rgb(47, 47, 228);
+}
+
+#order-section article form span button{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: brown;
+    font-size: 25px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+}
+
+#order-section article form span button:hover{
+    background-color: rgb(214, 29, 29);
+    border-color: rgb(184, 175, 175);
+    box-shadow: 1px 1px 2px rgb(119, 118, 118);
+}

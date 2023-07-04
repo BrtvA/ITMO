@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, на которой вы можете приобрести билет в кинотеатр.">
+        <meta name="keywords" content="Кино, кинотеатр, аврора, афиша">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <link rel="stylesheet" href="./css/style-flex.css">
+        <title>Аврора - Афиша</title>
+    </head>
+    <body>
+        <div id="context-menu">
+            <ul class="submenu">
+                <li>
+                    <a id="history-back" >
+                        Назад
+                    </a>
+                </li>
+                <li>
+                    <a id="history-go" >
+                        Вперед
+                    </a>
+                </li>
+                <li>
+                    <a id="location-reload" >
+                        Обновить
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <header>
+                <span class="menu">
+                    <ul>
+                        <div class="icon-menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                        </ul>
+                    </ul>
+                </span>
+                <span>
+                    <h1>Кинотеатр Аврора</h1>
+                </span>
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                <span>
+                    <a href="news.html">Новости</a>
+                </span>
+            </header>
+            <main>
+                <section id="posters-section" class="template-section column-direction-section">
+                    <article>
+                        <div class="indicator-new">
+                            <img src="./img/posters/spiderman_poster.jpg">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="info.html">
+                                    Человек-паук: Паутина вселенных
+                                </a>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Жанр: </p>
+                                </div>
+                                <div>
+                                    <p>Мультфильм</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="indicator-new">
+                            <img src="./img/posters/guardians_galaxy_poster.png">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="#">
+                                    Стражи Галактики 3
+                                </a>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Жанр: </p>
+                                </div>
+                                <div>
+                                    <p>Боевик, Фантастика</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/posters/lion_king_poster.png">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="#">
+                                    Король Лев
+                                </a>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Жанр: </p>
+                                </div>
+                                <div>
+                                    <p>Мультфильм</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; 2023 Aurora</h4>
+            </footer>
+        </div>
+        <script charset="utf-8" src="./js/jquery-3.7.0.js"></script>
+        <script charset="utf-8" src="./js/main.js"></script>
+    </body>
+</html>

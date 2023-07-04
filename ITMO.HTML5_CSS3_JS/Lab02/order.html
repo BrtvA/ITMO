@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, на которой вы можете приобрести билет в кинотеатр.">
+        <meta name="keywords" content="Кино, кинотеатр, аврора, билет, человек-паук">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <title>Аврора - Заказ</title>
+    </head>
+    <body>
+        <header>
+            <h1>Кинотеатр Аврора</h1>
+            <span>
+                <a href="index.html">Главная</a>
+            </span>
+            <span>
+                <a href="posters.html">Афиша</a>
+            </span>
+            <br /><br />
+        </header>
+        <main>
+            <section>
+                <img src="./img/hall scheme.jpg" alt="">
+                <br /> <br />
+            </section>
+            <section>
+                <form method="get" action="">
+                    <div>
+                        <span>Выберете зал</span><br />
+                        <input type="radio" name="hall" value="a" required /> Зал A <br/>
+                        <input type="radio" name="hall" value="b" required /> Зал B <br/>
+                        <input type="radio" name="hall" value="c" required /> Зал C <br/>
+                    </div>
+                    <div>
+                        <span>Выберете ряд</span>
+                        <select name="row" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Выберете место</span>
+                        <select name="column" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Введите email</span>
+                        <input type="email" name="email" required />
+                    </div>
+                    <div>
+                        <span>Введите номер телефона (формат: 8ХХХХХХХХХХ)</span>
+                        <input type="text" name="phoneNumber" pattern="8[0-9]{10}" />
+                    </div>
+                    <div>
+                        <span>Выберете дополнительные услуги</span> <br />
+                        <input type="checkbox" name="popcorn" value="popcorn" /> Попкорн (средний) <br />
+                        <input type="checkbox" name="soda" value="soda" /> Газировка (0.5 л) <br />
+                    </div>
+                    </div>
+                    <button type="submit">Купить</button>
+                </form>
+            </section>
+        </main>
+        <footer align="center">
+            <h4>&copy; 2023 Aurora</h4>
+        </footer>
+    </body>
+</html>

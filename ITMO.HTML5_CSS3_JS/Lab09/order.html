@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Это страница, на которой вы можете приобрести билет в кинотеатр.">
+        <meta name="keywords" content="Кино, кинотеатр, аврора, билет, человек-паук">
+        <meta name="author" content="Студент">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./ico/favicon.ico" />
+        <link rel="stylesheet" href="./css/style-flex.css">
+        <title>Аврора - Заказ</title>
+    </head>
+    <body>
+        <div id="context-menu">
+            <ul class="submenu">
+                <li>
+                    <a id="history-back" >
+                        Назад
+                    </a>
+                </li>
+                <li>
+                    <a id="history-go" >
+                        Вперед
+                    </a>
+                </li>
+                <li>
+                    <a id="location-reload" >
+                        Обновить
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <header>
+                <span class="menu">
+                    <ul>
+                        <div class="icon-menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <ul id="submenu" class="submenu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="posters.html">Афиша</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                        </ul>
+                    </ul>
+                </span>
+                <span>
+                    <h1>Кинотеатр Аврора</h1>
+                </span>
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                <span>
+                    <a href="posters.html">Афиша</a>
+                </span>
+                <span>
+                    <a href="news.html">Новости</a>
+                </span>
+                <br /><br />
+            </header>
+            <main>
+                <section id="order-section" class="template-section row-direction-section">
+                    <article>
+                        <img src="./img/hall_scheme.jpg">
+                    </article>
+                    <article>
+                        <form method="get" action="order-info.html">
+                            <span>
+                                <div>
+                                    <p>Выберете зал:</p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="radio" name="hall" value="a" required /> Зал A
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="hall" value="b" required /> Зал B
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="hall" value="c" required /> Зал C
+                                    </div>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете ряд:</p>
+                                </div>
+                                <div>
+                                    <select name="row" required>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете место:</p>
+                                </div>
+                                <div>
+                                    <select name="column" required>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете время:</p>
+                                </div>
+                                <div>
+                                    <select name="time" required>
+                                    </select>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Введите email:</p>
+                                </div>
+                                <div>
+                                    <input type="email" name="email" required />
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Введите номер телефона:</p>
+                                </div>
+                                <div>
+                                    <input type="text" name="phoneNumber" pattern="8[0-9]{10}" />
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Выберете дополнительные услуги:</p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="checkbox" name="popcorn" value="popcorn" /> Попкорн (средний)
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="soda" value="soda" /> Газировка (0.5 л)
+                                    </div>
+                                </div>
+                            </span>
+                            <span>
+                                <div>
+                                    <p>Цена:</p>
+                                </div>
+                                <div id="price-div">
+                                </div>
+                            </span>
+                            <span>
+                                <button class="red-button" type="submit">Купить</button>
+                            </span>
+                        </form>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; 2023 Aurora</h4>
+            </footer>
+        </div>
+        <script charset="utf-8" src="./js/jquery-3.7.0.js"></script>
+        <script charset="utf-8" src="./js/main.js"></script>
+        <script charset="utf-8" src="./js/order.js"></script>
+    </body>
+</html>
